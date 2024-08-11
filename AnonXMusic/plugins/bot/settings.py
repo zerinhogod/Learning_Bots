@@ -141,7 +141,7 @@ async def without_Admin_rights(client, CallbackQuery, _):
         except:
             pass
         playmode = await get_playmode(CallbackQuery.message.chat.id)
-        if playmode == "Direto":
+        if playmode == "Direct":
             Direct = True
         else:
             Direct = None
@@ -151,7 +151,7 @@ async def without_Admin_rights(client, CallbackQuery, _):
         else:
             Group = None
         playty = await get_playtype(CallbackQuery.message.chat.id)
-        if playty == "Todos":
+        if playty == "Everyone":
             Playtype = None
         else:
             Playtype = True
@@ -233,12 +233,12 @@ async def playmode_ans(client, CallbackQuery, _):
             await remove_nonadmin_chat(CallbackQuery.message.chat.id)
             Group = True
         playmode = await get_playmode(CallbackQuery.message.chat.id)
-        if playmode == "Direto":
+        if playmode == "Direct":
             Direct = True
         else:
             Direct = None
         playty = await get_playtype(CallbackQuery.message.chat.id)
-        if playty == "Todos":
+        if playty == "Everyone":
             Playtype = None
         else:
             Playtype = True
@@ -249,7 +249,7 @@ async def playmode_ans(client, CallbackQuery, _):
         except:
             pass
         playmode = await get_playmode(CallbackQuery.message.chat.id)
-        if playmode == "Direto":
+        if playmode == "Direct":
             await set_playmode(CallbackQuery.message.chat.id, "Inline")
             Direct = None
         else:
@@ -261,7 +261,7 @@ async def playmode_ans(client, CallbackQuery, _):
         else:
             Group = None
         playty = await get_playtype(CallbackQuery.message.chat.id)
-        if playty == "Todos":
+        if playty == "Everyone":
             Playtype = False
         else:
             Playtype = True
@@ -272,14 +272,14 @@ async def playmode_ans(client, CallbackQuery, _):
         except:
             pass
         playty = await get_playtype(CallbackQuery.message.chat.id)
-        if playty == "Todos":
+        if playty == "Everyone":
             await set_playtype(CallbackQuery.message.chat.id, "Admin")
             Playtype = False
         else:
             await set_playtype(CallbackQuery.message.chat.id, "Everyone")
             Playtype = True
         playmode = await get_playmode(CallbackQuery.message.chat.id)
-        if playmode == "Direto":
+        if playmode == "Direct":
             Direct = True
         else:
             Direct = None
