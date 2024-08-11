@@ -56,5 +56,5 @@ async def play_live_stream(client, CallbackQuery, _):
             err = e if ex_type == "AssistantErr" else _["general_2"].format(ex_type)
             return await mystic.edit_text(err)
     else:
-        return await mystic.edit_text("Não está ao vivo.")
+        return await mystic.edit_text("Não é transmissão ao vivo.")
     await mystic.delete()
