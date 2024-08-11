@@ -9,10 +9,10 @@ load_dotenv()
 
 API_ID = 21782992
 API_HASH = "5c8a12b9dd70d182e11d9ead5d357dab"
-BOT_TOKEN = "7261208882:AAFVXE5Rih3RwTkcNHK1yzidJhadacBwjjU"
+BOT_TOKEN = "7290157519:AAEpxiPRdd_e662Hi63tsHjfbofkJQRVlvs"
 MONGO_DB_URI = "mongodb+srv://luceenavictor:luceenavictor@cluster0.h7o0q.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 60))
-LOGGER_ID = -1002192887065
+LOGGER_ID = -1002246269016
 OWNER_ID = 672466909
 
 ## Fill these variables if you're deploying on heroku.
@@ -30,8 +30,8 @@ GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://discord.gg/b6wEAzfKFf")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://discord.gg/b6wEAzfKFf")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
