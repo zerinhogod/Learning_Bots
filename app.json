@@ -1,7 +1,7 @@
 {
-    "name": "ᴀɴᴏɴ ダ ᴍᴜsɪᴄ",
-    "description": "A Telegram Music Player Bot, written in Python with Pyrogram and Py-Tgcalls.",
-    "logo": "https://te.legra.ph/file/b8a0c1a00db3e57522b53.jpg",
+    "name": "COMBINADO MUSIC",
+    "description": "Melhor que muita JBL por aí...",
+    "logo": "https://graph.org/file/f07d15ffe9392f135cc69.jpg",
     "keywords": [
     "python3",
     "telegram",
@@ -13,47 +13,47 @@
     ],
     "env": {
       "API_ID": {
-        "description": "Get this value from https://my.telegram.org",
+        "description": "Obtenha esse valor de https://my.telegram.org",
         "value": "",
         "required": true
       },
       "API_HASH": {
-        "description": "Get this value from https://my.telegram.org",
+        "description": "Obtenha esse valor de https://my.telegram.org",
         "value": "",
         "required": true
       },
       "BOT_TOKEN": {
-        "description": "A Bot's token from Botfather",
+        "description": "Um token de bot do Botfather",
         "value": "",
         "required": true
       },
       "MONGO_DB_URI": {
-        "description": "Get a mongodb url from https://cloud.mongodb.com.",
+        "description": "Obtenha um URL do mongodb em https://cloud.mongodb.com.",
         "value": "",
         "required": true
       },
       "OWNER_ID": {
-        "description": "The user id of user whom you would like to add as OWNER.",
+        "description": "O ID do usuário que você gostaria de adicionar como PROPRIETÁRIO.",
         "value": "",
         "required": true
       },
       "STRING_SESSION": {
-        "description": "A Pyrogram v2 String Session from @StringFatherBot on Telegram.",
+        "description": "Uma sessão de string Pyrogram v2 de @StringFatherBot no Telegram.",
         "value": "",
         "required": true
       },
       "HEROKU_API_KEY": {
-        "description": "Your Heroku account's API key",
+        "description": "Chave API da sua conta Heroku.",
         "value": "",
         "required": false
       },
       "HEROKU_APP_NAME": {
-        "description": "Your heroku app name",
+        "description": "O nome do seu aplicativo Heroku",
         "value": "",
         "required": false
       },
       "LOGGER_ID": {
-        "description": "Your Log Group ID, add your bot and promote as an admin with full rights!. Channel ki id mat daal dena bsdk.",
+        "description": "ID do grupo de log, adicione seu bot e promova-o como administrador com todos os direitos! Insira o ID do canal e bsdk.",
         "value": "",
         "required": true
       }
