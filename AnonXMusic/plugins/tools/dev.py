@@ -42,7 +42,7 @@ async def edit_or_reply(msg: Message, **kwargs):
 )
 async def executor(client: app, message: Message):
     if len(message.command) < 2:
-        return await edit_or_reply(message, text="<b>ᴡʜᴀᴛ ʏᴏᴜ ᴡᴀɴɴᴀ ᴇxᴇᴄᴜᴛᴇ ʙᴀʙʏ ?</b>")
+        return await edit_or_reply(message, text="<b>O que você quer fazer carai?</b>")
     try:
         cmd = message.text.split(" ", maxsplit=1)[1]
     except IndexError:
@@ -81,14 +81,14 @@ async def executor(client: app, message: Message):
                 [
                     InlineKeyboardButton(
                         text="⏳",
-                        callback_data=f"runtime {t2-t1} Seconds",
+                        callback_data=f"runtime {t2-t1} segundos",
                     )
                 ]
             ]
         )
         await message.reply_document(
             document=filename,
-            caption=f"<b>⥤ ᴇᴠᴀʟ :</b>\n<code>{cmd[0:980]}</code>\n\n<b>⥤ ʀᴇsᴜʟᴛ :</b>\nAttached Document",
+            caption=f"<b>⥤ Avaliação:</b>\n<code>{cmd[0:980]}</code>\n\n<b>⥤ Resultado:</b>\nDocumento anexado",
             quote=False,
             reply_markup=keyboard,
         )
@@ -101,7 +101,7 @@ async def executor(client: app, message: Message):
                 [
                     InlineKeyboardButton(
                         text="⏳",
-                        callback_data=f"runtime {round(t2-t1, 3)} Seconds",
+                        callback_data=f"runtime {round(t2-t1, 3)} segundos",
                     ),
                     InlineKeyboardButton(
                         text="🗑",
@@ -127,7 +127,7 @@ async def forceclose_command(_, CallbackQuery):
     if CallbackQuery.from_user.id != int(user_id):
         try:
             return await CallbackQuery.answer(
-                "» ɪᴛ'ʟʟ ʙᴇ ʙᴇᴛᴛᴇʀ ɪғ ʏᴏᴜ sᴛᴀʏ ɪɴ ʏᴏᴜʀ ʟɪᴍɪᴛs ʙᴀʙʏ.", show_alert=True
+                "Ou tu fica no teu limite ou vou derrubar tua conta carai.", show_alert=True
             )
         except:
             return
@@ -152,7 +152,7 @@ async def forceclose_command(_, CallbackQuery):
 )
 async def shellrunner(_, message: Message):
     if len(message.command) < 2:
-        return await edit_or_reply(message, text="<b>ᴇxᴀᴍᴩʟᴇ :</b>\n/sh git pull")
+        return await edit_or_reply(message, text="<b>Exemplo:</b>\n/sh git pull")
     text = message.text.split(None, 1)[1]
     if "\n" in text:
         code = text.split("\n")
@@ -166,7 +166,7 @@ async def shellrunner(_, message: Message):
                     stderr=subprocess.PIPE,
                 )
             except Exception as err:
-                await edit_or_reply(message, text=f"<b>ERROR :</b>\n<pre>{err}</pre>")
+                await edit_or_reply(message, text=f"<b>Erro:</b>\n<pre>{err}</pre>")
             output += f"<b>{code}</b>\n"
             output += process.stdout.read()[:-1].decode("utf-8")
             output += "\n"
@@ -189,7 +189,7 @@ async def shellrunner(_, message: Message):
                 tb=exc_tb,
             )
             return await edit_or_reply(
-                message, text=f"<b>ERROR :</b>\n<pre>{''.join(errors)}</pre>"
+                message, text=f"<b>Erro:</b>\n<pre>{''.join(errors)}</pre>"
             )
         output = process.stdout.read()[:-1].decode("utf-8")
     if str(output) == "\n":
@@ -205,7 +205,7 @@ async def shellrunner(_, message: Message):
                 caption="<code>Output</code>",
             )
             return os.remove("output.txt")
-        await edit_or_reply(message, text=f"<b>OUTPUT :</b>\n<pre>{output}</pre>")
+        await edit_or_reply(message, text=f"<b>Saída:</b>\n<pre>{output}</pre>")
     else:
-        await edit_or_reply(message, text="<b>OUTPUT :</b>\n<code>None</code>")
+        await edit_or_reply(message, text="<b>Saída:</b>\n<code>None</code>")
     await message.stop_propagation()
