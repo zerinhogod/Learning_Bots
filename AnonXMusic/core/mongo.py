@@ -10,5 +10,5 @@ try:
     mongodb = _mongo_async_.Anon
     LOGGER(__name__).info("Conectado ao seu MongoDB.")
 except:
-    LOGGER(__name__).error("Falhaao conectar-se ao seu MongoDB.")
+    LOGGER(__name__).error("Falha ao conectar-se ao seu MongoDB.")
     exit()
