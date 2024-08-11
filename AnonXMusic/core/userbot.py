@@ -47,7 +47,7 @@ class Userbot(Client):
         )
 
     async def start(self):
-        LOGGER(__name__).info(f"Starting Assistants...")
+        LOGGER(__name__).info(f"Iniciando assistentes...")
         if config.STRING1:
             await self.one.start()
             try:
@@ -57,17 +57,17 @@ class Userbot(Client):
                 pass
             assistants.append(1)
             try:
-                await self.one.send_message(config.LOGGER_ID, "Assistant Started")
+                await self.one.send_message(config.LOGGER_ID, "Assistente iniciado")
             except:
                 LOGGER(__name__).error(
-                    "Assistant Account 1 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin!"
+                    "A conta do assistente 1 não conseguiu acessar o grupo de logs. Certifique-se de ter adicionado seu assistente ao seu grupo de log e promovido como administrador!"
                 )
                 exit()
             self.one.id = self.one.me.id
             self.one.name = self.one.me.mention
             self.one.username = self.one.me.username
             assistantids.append(self.one.id)
-            LOGGER(__name__).info(f"Assistant Started as {self.one.name}")
+            LOGGER(__name__).info(f"Assistente 1 iniciado como {self.one.name}")
 
         if config.STRING2:
             await self.two.start()
@@ -78,17 +78,17 @@ class Userbot(Client):
                 pass
             assistants.append(2)
             try:
-                await self.two.send_message(config.LOGGER_ID, "Assistant Started")
+                await self.two.send_message(config.LOGGER_ID, "Assistente iniciado")
             except:
                 LOGGER(__name__).error(
-                    "Assistant Account 2 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin!"
+                    "A conta do assistente 2 não conseguiu acessar o grupo de logs. Certifique-se de ter adicionado seu assistente ao seu grupo de log e promovido como administrador!"
                 )
                 exit()
             self.two.id = self.two.me.id
             self.two.name = self.two.me.mention
             self.two.username = self.two.me.username
             assistantids.append(self.two.id)
-            LOGGER(__name__).info(f"Assistant Two Started as {self.two.name}")
+            LOGGER(__name__).info(f"Assistente 2 começou como {self.two.name}")
 
         if config.STRING3:
             await self.three.start()
@@ -99,17 +99,17 @@ class Userbot(Client):
                 pass
             assistants.append(3)
             try:
-                await self.three.send_message(config.LOGGER_ID, "Assistant Started")
+                await self.three.send_message(config.LOGGER_ID, "Assistente iniciado")
             except:
                 LOGGER(__name__).error(
-                    "Assistant Account 3 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin! "
+                    "A conta do assistente 3 não conseguiu acessar o grupo de logs. Certifique-se de ter adicionado seu assistente ao seu grupo de log e promovido como administrador!"
                 )
                 exit()
             self.three.id = self.three.me.id
             self.three.name = self.three.me.mention
             self.three.username = self.three.me.username
             assistantids.append(self.three.id)
-            LOGGER(__name__).info(f"Assistant Three Started as {self.three.name}")
+            LOGGER(__name__).info(f"Assistente 3 começou como {self.three.name}")
 
         if config.STRING4:
             await self.four.start()
@@ -120,17 +120,17 @@ class Userbot(Client):
                 pass
             assistants.append(4)
             try:
-                await self.four.send_message(config.LOGGER_ID, "Assistant Started")
+                await self.four.send_message(config.LOGGER_ID, "Assistente iniciado")
             except:
                 LOGGER(__name__).error(
-                    "Assistant Account 4 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin! "
+                    "A conta do assistente 4 não conseguiu acessar o grupo de logs. Certifique-se de ter adicionado seu assistente ao seu grupo de log e promovido como administrador!"
                 )
                 exit()
             self.four.id = self.four.me.id
             self.four.name = self.four.me.mention
             self.four.username = self.four.me.username
             assistantids.append(self.four.id)
-            LOGGER(__name__).info(f"Assistant Four Started as {self.four.name}")
+            LOGGER(__name__).info(f"Assistente 4 começou como {self.four.name}")
 
         if config.STRING5:
             await self.five.start()
@@ -141,20 +141,20 @@ class Userbot(Client):
                 pass
             assistants.append(5)
             try:
-                await self.five.send_message(config.LOGGER_ID, "Assistant Started")
+                await self.five.send_message(config.LOGGER_ID, "Assistente iniciado")
             except:
                 LOGGER(__name__).error(
-                    "Assistant Account 5 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin! "
+                    "A conta do assistente 5 não conseguiu acessar o grupo de logs. Certifique-se de ter adicionado seu assistente ao seu grupo de log e promovido como administrador!"
                 )
                 exit()
             self.five.id = self.five.me.id
             self.five.name = self.five.me.mention
             self.five.username = self.five.me.username
             assistantids.append(self.five.id)
-            LOGGER(__name__).info(f"Assistant Five Started as {self.five.name}")
+            LOGGER(__name__).info(f"Assistente 5 começou como {self.five.name}")
 
     async def stop(self):
-        LOGGER(__name__).info(f"Stopping Assistants...")
+        LOGGER(__name__).info(f"Parando assistentes...")
         try:
             if config.STRING1:
                 await self.one.stop()
