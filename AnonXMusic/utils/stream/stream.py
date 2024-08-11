@@ -369,7 +369,7 @@ async def stream(
             db[chat_id][0]["markup"] = "tg"
     elif streamtype == "index":
         link = result
-        title = "ɪɴᴅᴇx ᴏʀ ᴍ3ᴜ8 ʟɪɴᴋ"
+        title = "Index ou link do M3U8"
         duration_min = "00:00"
         if await is_active_chat(chat_id):
             await put_queue_index(
